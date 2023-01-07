@@ -2,7 +2,7 @@ import React from "react";
 import './header.scss';
 import {motion} from 'framer-motion';
 import {images} from '../../constants'
-import Typical from "react-typical";
+
 
 const scaleVariants = {
     whileInView: {
@@ -40,13 +40,15 @@ const Header = () => {
                     </div>
                     <div className="tag-cmp app__flex">
                         <p className="p-text">
-                            <Typical
-                                loop={Infinity}
-                                steps={[
-                                    "Software Engineer", 1000,
-                                    "Looking for Co-Op Summer term", 1000,
-                                ]}
-                            />
+                            <motion.div
+                                whileInView={{opacity: 1}}
+                                whileHover={{scale: 1.1}}
+                                transition={{duration: 0.5, type: 'tween'}}>
+                                "Software Engineer"
+                                <br/>
+                                <br/>
+                                "Looking for Co-Op Summer term"
+                            </motion.div>
                         </p>
                     </div>
                     <br/>
