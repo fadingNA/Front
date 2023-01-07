@@ -38,6 +38,7 @@ const About = () => {
                         key={about.title + i}>
                         <a href={about.linkUrl} target={"_blank"}>
                             <img src={about.imgURL} alt={about.title}/>
+
                         </a>
                         <h2 className="bold-text" style={{marginTop: 20,}}>{about.title}</h2>
                         <p className="bold-text" style={{marginTop: 10}}>{about.description}</p>
