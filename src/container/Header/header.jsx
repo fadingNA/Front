@@ -15,6 +15,17 @@ const scaleVariants = {
     }
 }
 const Header = () => {
+    async function handleDownload(){
+        const response = await fetch('https://your-file-url.com/file.pdf');
+        const file = await response.blob();
+        const url = URL.createObjectURL(file);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'your-file-name.pdf';
+        link.click();
+        URL.revokeObjectURL(url);
+    }
+
     return (
         <div id="home" className="app__header app__flex">
             <motion.div
@@ -37,6 +48,12 @@ const Header = () => {
                             </h1>
 
                         </motion.div>
+                    </div>
+                    <div className="app__flex">
+                        <a href={images.email} download>
+                            <button onClick={handleDownload}>Download</button>
+                        </a>
+
                     </div>
                     <div className="tag-cmp app__flex">
                         <p className="p-text">

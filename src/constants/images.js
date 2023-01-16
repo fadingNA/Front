@@ -35,13 +35,22 @@ import nb from '../image-videos/nb.png';
 import skype from '../image-videos/skype.png';
 import spotify from '../image-videos/spotify.png';
 import working from '../image-videos/working.png';
+import about05 from '../image-videos/about05.png'
+import microart from '../image-videos/microart.png'
+import imper from '../image-videos/imperfect.png'
+import madmex from '../image-videos/madmex.png'
+import nha from '../image-videos/nha.png'
 
 export default {
+    nha,
     email,
+    madmex,
     mobile,
+    imper,
     api,
     cpp,
     css,
+    microart,
     figma,
     flutter,
     git,
@@ -60,6 +69,7 @@ export default {
     about02,
     about03,
     about04,
+    about05,
     profile,
     circle,
     logo,
